@@ -1,0 +1,116 @@
+ext {
+    //支持AndroidX的配置文件，得注意相关第三方库也不能使用AndroidX相关的引用
+    //应用配置
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+            applicationId    : "com.wanou.mvplibrary"
+    ]
+
+    dependencies = [
+            // androidx
+            "appcompat"                         : "androidx.appcompat:appcompat:1.1.0",
+            "material"                          : "com.google.android.material:material:1.1.0-beta01",
+            "constraintLayout"                  : "androidx.constraintlayout:constraintlayout:1.1.3",
+            "multidex"                          : "androidx.multidex:multidex:2.0.1",
+            "core-ktx"                          : "androidx.core:core-ktx:1.2.0-beta01",
+            // 支持库
+            "legacy-support-v4"                 : "androidx.legacy:legacy-support-v4:1.0.0",
+            // kotlin
+            "kotlin"                            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.50",
+
+            //rx
+            "rxjava2"                           : "io.reactivex.rxjava2:rxjava:2.2.11",
+            "rxandroid2"                        : "io.reactivex.rxjava2:rxandroid:2.1.1",
+            "rxlifecycle3"                      : "com.trello.rxlifecycle3:rxlifecycle:3.0.0",
+            "rxlifecycle3-android"              : "com.trello.rxlifecycle3:rxlifecycle-components-preference:3.0.0",
+            "rxlifecycle3-components"           : "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
+//            "rxcache2"                              : "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x",
+            "rxpermissions2"                    : "com.github.tbruyelle:rxpermissions:0.10.2",
+
+            //network
+            "okhttp3"                           : "com.squareup.okhttp3:okhttp:4.1.0",
+            "okhttp3-log"                       : "com.squareup.okhttp3:logging-interceptor:4.1.0",
+            "okgo"                              : "com.lzy.net:okgo:3.0.4",
+            "retrofit2"                         : "com.squareup.retrofit2:retrofit:2.6.1",
+            "retrofit2-converter-gson"          : "com.squareup.retrofit2:converter-gson:2.6.1",
+            "retrofit-adapter-rxjava2"          : "com.squareup.retrofit2:adapter-rxjava2:2.6.1",
+
+            //glide
+            "glide"                             : "com.github.bumptech.glide:glide:4.9.0",
+            "glide-compiler"                    : "com.github.bumptech.glide:compiler:4.9.0",
+            //Glide与OkHttp结合使用的问题
+            "glide-loader-okhttp3"              : "com.github.bumptech.glide:okhttp3-integration:4.9.0",
+            "glide-annotations"                 : "com.github.bumptech.glide:annotations:4.9.0",
+
+            //tools
+            //gson
+            "gson"                              : "com.google.code.gson:gson:2.8.5",
+            //dagger2
+            "dagger2"                           : "com.google.dagger:dagger:2.24",
+            "dagger2-android"                   : "com.google.dagger:dagger-android:2.24",
+            "dagger2-android-support"           : "com.google.dagger:dagger-android-support:2.24",
+            "dagger2-compiler"                  : "com.google.dagger:dagger-compiler:2.24",
+            "dagger2-android-processor"         : "com.google.dagger:dagger-android-processor:2.24",
+            //Dagger2 javax.annotation不存在   添加缺失的部分javax注解
+            "javax.annotation"                  : "org.glassfish:javax.annotation:10.0-b28",
+            //butterknife
+            "butterknife"                       : "com.jakewharton:butterknife:10.1.0",
+            "butterknife-compiler"              : "com.jakewharton:butterknife-compiler:10.1.0",
+            //eventbus
+            "eventbus"                          : "org.greenrobot:eventbus:3.1.1",
+            //arouter
+            "arouter"                           : "com.alibaba:arouter-api:1.5.0",
+            "arouter-compiler"                  : "com.alibaba:arouter-compiler:1.2.2",
+//            //BaseRecyclerViewAdapterHelperImmersionBar
+            "brvah"                             : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47-androidx",
+            //SmartRefreshLayout
+            "SmartRefreshLayout"                : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
+            "SmartRefreshHeader"                : "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0",
+            // 导航栏库
+            "immersionbar"                      : "com.gyf.immersionbar:immersionbar:3.0.0-beta05",
+            // 动画库
+            "lottie"                            : "com.airbnb.android:lottie:3.0.7",
+            // 屏幕适配
+            "autosize"                          : "me.jessyan:autosize:1.1.2",
+//            // 轮播图
+//            "banner"                            : "com.youth.banner:banner:1.4.10",
+            // 日志
+            "logger"                            : "com.orhanobut:logger:2.2.0",
+            //view
+            "topsnackbar"                       : "com.androidadvance:topsnackbar:1.1.1",
+            //webView
+            "agentWeb"                          : "com.just.agentweb:agentweb:4.1.2",
+            // rxjava2 处理绑定注销作用域
+            "autodispose"                       : "com.uber.autodispose:autodispose:1.4.0",
+            "autodispose-lifecycle"             : "com.uber.autodispose:autodispose-lifecycle:1.4.0",
+            "autodispose-android"               : "com.uber.autodispose:autodispose-android:1.4.0",
+            "autodispose-android-archcomponents": "com.uber.autodispose:autodispose-android-archcomponents:1.4.0",
+            // bugly
+            //其中latest.release指代最新版本号，也可以指定明确的版本    号，例如1.2.0
+            "buglyUpgrade"                      : "com.tencent.bugly:crashreport_upgrade:1.2.0",
+            "buglyCrash"                        : "com.tencent.bugly:nativecrashreport:2.2.0", //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+            // 权限申请
+            "permission"                        : "com.yanzhenjie:permission:2.0.3"
+    ]
+
+    /**
+     * 日志和环境配置
+     */
+    //开启日志
+    OPEN_LOG = true
+//    OPEN_LOG = false
+    //开启切换环境
+    OPEN_CHANGE = true
+//    OPEN_CHANGE = false
+    //统一返回网络请求成功
+    CODE_SUCCESS = "1"
+    //增删改查返回网络请求成功，因为不支持集合，这里采用,分割
+    CODELIST_SUCCESS = "1,0"
+
+}

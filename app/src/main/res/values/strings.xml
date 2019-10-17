@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MvpLibraryDemo</string>
+
+    <string name="url">https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;ch=&amp;tn=baidu&amp;bar=&amp;wd=java+%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93++nameconfig%E6%A0%87%E7%AD%BE%E9%85%8D%E7%BD%AE&amp;oq=java%2520%25E9%2585%258D%25E7%25BD%25AE%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2520%2526amp%2520usessl%2520%25E9%2597%25AE%25E9%25A2%2598&amp;rsv_pq=cbdfa8be00001703&amp;rsv_t=cc640b%2BojxktnIMWy88wqv2Bq%2FYyW7sqvTwskYE2oQAzr909IllIVyLb86g&amp;rqlang=cn&amp;rsv_enter=1&amp;rsv_dl=tb&amp;inputT=7451</string>
+</resources>

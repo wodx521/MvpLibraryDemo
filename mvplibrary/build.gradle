@@ -1,0 +1,70 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+def config = rootProject.ext.android
+def root = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    api root["appcompat"]
+    api root["material"]
+    api root["constraintLayout"]
+    api root["multidex"]
+    api root["core-ktx"]
+    api root["legacy-support-v4"]
+    api root["kotlin"]
+//    api root["brvah"]
+    api root["rxjava2"]
+    api root["rxandroid2"]
+    api root["retrofit2"]
+    api root["retrofit2-converter-gson"]
+    api root["retrofit-adapter-rxjava2"]
+    api root["okhttp3"]
+    api root["gson"]
+    api root["logger"]
+    api root["autodispose"]
+    api root["autodispose-lifecycle"]
+    api root["autodispose-android"]
+    api root["autodispose-android-archcomponents"]
+    api root["autosize"]
+    api root["glide"]
+    kapt root["glide-compiler"]
+//    api root["arouter"]
+//    kapt root["arouter-compiler"]
+    api root["permission"]
+    api root["SmartRefreshLayout"]
+    api root["SmartRefreshHeader"]
+}
