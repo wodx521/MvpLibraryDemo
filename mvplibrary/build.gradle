@@ -46,7 +46,7 @@ dependencies {
     api root["core-ktx"]
     api root["legacy-support-v4"]
     api root["kotlin"]
-//    api root["brvah"]
+    api root["brvah"]
     api root["rxjava2"]
     api root["rxandroid2"]
     api root["retrofit2"]
@@ -67,4 +67,5 @@ dependencies {
     api root["permission"]
     api root["SmartRefreshLayout"]
     api root["SmartRefreshHeader"]
+    api root["toast"]
 }

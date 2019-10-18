@@ -67,7 +67,7 @@ ext {
             "arouter"                           : "com.alibaba:arouter-api:1.5.0",
             "arouter-compiler"                  : "com.alibaba:arouter-compiler:1.2.2",
 //            //BaseRecyclerViewAdapterHelperImmersionBar
-            "brvah"                             : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47-androidx",
+            "brvah"                             : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49-androidx",
             //SmartRefreshLayout
             "SmartRefreshLayout"                : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
             "SmartRefreshHeader"                : "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0",
@@ -96,7 +96,9 @@ ext {
             "buglyCrash"                        : "com.tencent.bugly:nativecrashreport:2.2.0", //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 
             // 权限申请
-            "permission"                        : "com.yanzhenjie:permission:2.0.3"
+            "permission"                        : "com.yanzhenjie:permission:2.0.3",
+            // 轮子哥toast
+            "toast"                             : "com.hjq:toast:8.0"
     ]
 
     /**
