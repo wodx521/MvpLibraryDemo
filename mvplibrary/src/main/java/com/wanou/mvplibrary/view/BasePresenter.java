@@ -7,6 +7,7 @@ public class BasePresenter<V extends BaseView> {
         this.view = view;
     }
 
+    // 格式化链接
     protected String formatUrl(String needFormatUrl, String... params) {
         if (needFormatUrl != null && params.length > 0) {
             return String.format(needFormatUrl, params);
